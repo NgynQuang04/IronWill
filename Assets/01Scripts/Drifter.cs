@@ -12,6 +12,9 @@ public class Drifter : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
         Vector2 randomDir = Random.insideUnitCircle.normalized;
         rb.AddForce(randomDir * initialImpulse, ForceMode2D.Impulse);
     }

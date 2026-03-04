@@ -3,11 +3,18 @@
 public class CameraFollow : MonoBehaviour
 {
     public Transform player;
-    public float smoothSpeed = 0.1f;   // đổi từ 5f → 0.1f
 
-    public float minSize = 5f;
-    public float maxSize = 8f;
-    public float zoomMultiplier = 1f;
+    [Header("Follow")]
+    public float followSmoothTime = 0.15f;
+
+    [Header("Zoom Base")]
+    public float normalSize = 5f;
+    public float zoomedOutSize = 8f;
+    public float zoomOutSpeedThreshold = 10f;
+
+    [Header("Zoom Smooth")]
+    public float zoomInSmoothTime = 0.4f;
+    public float zoomOutSmoothTime = 0.15f;
 
     private Camera cam;
     private Rigidbody2D playerRb;
@@ -25,7 +32,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (player == null) return;
 
-        // FOLLOW (SmoothDamp thay vì Lerp)
+        // ================= FOLLOW =================
         Vector3 targetPosition = new Vector3(
             player.position.x,
             player.position.y,
@@ -36,19 +43,28 @@ public class CameraFollow : MonoBehaviour
             transform.position,
             targetPosition,
             ref velocity,
-            smoothSpeed
+            followSmoothTime
         );
 
-        // ZOOM (SmoothDamp thay vì Lerp)
+        // ================= ZOOM =================
         float speed = playerRb.linearVelocity.magnitude;
-        float targetSize = minSize + speed * zoomMultiplier;
-        targetSize = Mathf.Clamp(targetSize, minSize, maxSize);
+
+        float targetSize = normalSize;
+
+        if (speed > zoomOutSpeedThreshold)
+        {
+            targetSize = zoomedOutSize;
+        }
+
+        float smoothTime = (targetSize > cam.orthographicSize)
+            ? zoomOutSmoothTime   // zoom out nhanh
+            : zoomInSmoothTime;   // zoom in chậm hơn
 
         cam.orthographicSize = Mathf.SmoothDamp(
             cam.orthographicSize,
             targetSize,
             ref zoomVelocity,
-            0.3f
+            smoothTime
         );
     }
 }

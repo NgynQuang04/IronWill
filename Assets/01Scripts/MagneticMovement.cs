@@ -7,14 +7,18 @@ public class MagneticMovement : MonoBehaviour
     public float magneticRadius = 8f;
     public float magneticStrength = 50f;
     public float minDistance = 1f;
-    public float maxForce = 3f;
+    public float maxForce = 4f;
+
+    [Header("Orbit Boost")]
+    [Range(0f, 1f)]
+    public float orbitStrength = 0.3f;
 
     [Header("Steering")]
     [Range(0f, 1f)]
-    public float steerStrength = 0.75f;   // độ xoay theo chuột (0-1)
+    public float steerStrength = 0.75f;
 
     [Header("Speed Limit")]
-    public float maxSpeed = 12f;
+    public float maxSpeed = 15f;
 
     [Header("Ground Check")]
     public Transform groundCheck;
@@ -32,7 +36,6 @@ public class MagneticMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
 
-        // Giúp mượt khi tốc độ cao
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
     }
@@ -48,12 +51,6 @@ public class MagneticMovement : MonoBehaviour
     {
         Vector2 mouseWorld = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mouseDir = (mouseWorld - rb.position).normalized;
-
-        Debug.DrawLine(
-            rb.position,
-            rb.position + mouseDir * magneticRadius,
-            Color.cyan
-        );
 
         RaycastHit2D hit = Physics2D.Raycast(
             rb.position,
@@ -73,13 +70,15 @@ public class MagneticMovement : MonoBehaviour
         float force = magneticStrength * t * t;
         force = Mathf.Min(force, maxForce);
 
-        // ===== STEERING MƯỢT =====
-
-        // Hướng chuẩn về drifter
+        // ===== BASE DIRECTION =====
         Vector2 baseDir = (hit.point - rb.position).normalized;
 
-        // Trộn hướng về target và hướng chuột
-        Vector2 finalDir = Vector2.Lerp(baseDir, mouseDir, steerStrength).normalized;
+        // ===== STEERING =====
+        Vector2 steeredDir = Vector2.Lerp(baseDir, mouseDir, steerStrength).normalized;
+
+        // ===== ORBIT BOOST =====
+        Vector2 perpendicular = new Vector2(-steeredDir.y, steeredDir.x);
+        Vector2 finalDir = (steeredDir + perpendicular * orbitStrength).normalized;
 
         Vector2 forceVector = Vector2.zero;
 
@@ -101,12 +100,11 @@ public class MagneticMovement : MonoBehaviour
     {
         if (rb.linearVelocity.magnitude > maxSpeed)
         {
-            rb.linearVelocity =
-                Vector2.Lerp(
-                    rb.linearVelocity,
-                    rb.linearVelocity.normalized * maxSpeed,
-                    0.2f
-                );
+            rb.linearVelocity = Vector2.Lerp(
+                rb.linearVelocity,
+                rb.linearVelocity.normalized * maxSpeed,
+                0.15f
+            );
         }
     }
 
@@ -130,5 +128,11 @@ public class MagneticMovement : MonoBehaviour
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, magneticRadius);
+
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
+        }
     }
 }

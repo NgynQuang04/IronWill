@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3449842581851286517
+--- !u!1 &4813264396298975364
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1249520948043184715}
-  - component: {fileID: 4189553931358552360}
-  m_Layer: 7
-  m_Name: Square
+  - component: {fileID: 7520575495708868103}
+  - component: {fileID: 8351808864076720201}
+  m_Layer: 0
+  m_Name: Artboard 3 copy@2x 1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1249520948043184715
+--- !u!4 &7520575495708868103
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3449842581851286517}
+  m_GameObject: {fileID: 4813264396298975364}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0034711054}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.016, y: 0.017, z: -0.0034711054}
+  m_LocalScale: {x: 0.30428568, y: 0.30428568, z: 0.1491}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1429322311855746289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4189553931358552360
+--- !u!212 &8351808864076720201
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3449842581851286517}
+  m_GameObject: {fileID: 4813264396298975364}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -81,12 +81,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8396226, g: 0, b: 0.5976627, a: 1}
+  m_Sprite: {fileID: 1495642431202591133, guid: 652014584ba81fe4a881974bc092b3a0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.16, y: 3.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -124,7 +124,7 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1249520948043184715}
+  - {fileID: 7520575495708868103}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1973967495844867292
@@ -214,6 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialImpulse: 1
   maxSpeed: 1
+  moveRight: 1
 --- !u!114 &7891813709535909059
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,22 +3,35 @@ using UnityEngine.SceneManagement;
 
 public class ExitDoor : MonoBehaviour
 {
+    [Header("Landing Settings")]
     public float landingRadius = 1.5f;
     public float maxLandingSpeed = 3f;
 
-    void Update()
+    Rigidbody2D playerRb;
+    //GroundChecker groundChecker;
+    Transform player;
+
+    void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+
         if (player == null) return;
 
-        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        MagneticMovement movement = player.GetComponent<MagneticMovement>();
+        playerRb = player.GetComponent<Rigidbody2D>();
+        //groundChecker = player.GetComponent<GroundChecker>();
+    }
 
-        float distance = Vector2.Distance(player.transform.position, transform.position);
+    void Update()
+    {
+        if (player == null) return;
+
+        float distance = Vector2.Distance(player.position, transform.position);
 
         if (distance < landingRadius &&
-            rb.linearVelocity.magnitude < maxLandingSpeed &&
-            movement.IsGrounded())
+            playerRb.linearVelocity.magnitude < maxLandingSpeed )
+            //&&
+            //groundChecker != null &&
+            //groundChecker.IsGrounded())
         {
             LoadNextLevel();
         }

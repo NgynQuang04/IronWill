@@ -222,12 +222,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6436331669856005441}
-  - component: {fileID: 863638776005710468}
-  - component: {fileID: 3541595602368543743}
-  - component: {fileID: 5766320915674439222}
-  - component: {fileID: 6387794829982321912}
   - component: {fileID: 2786776289341013734}
   - component: {fileID: 5400600347214487968}
+  - component: {fileID: 991957727311261235}
+  - component: {fileID: 2621721121671762329}
+  - component: {fileID: 1272535439891621581}
+  - component: {fileID: 4596388607908435951}
+  - component: {fileID: 5068731902590035270}
+  - component: {fileID: 1230132738484557143}
+  - component: {fileID: 4565160039229132262}
+  - component: {fileID: 5973755615810659827}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -253,83 +257,6 @@ Transform:
   - {fileID: 6691868957996522726}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863638776005710468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850378690621662833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2febbbe43e1be4a488c82cebe4fe4815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  damageThreshold: 2
-  damageMultiplier: 5
---- !u!114 &3541595602368543743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850378690621662833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e9f90224fbe3c34b90ace1100145623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerStartImpulse
-  useStartImpulse: 1
-  startDirection: {x: 1, y: 0.2}
-  startImpulse: 1.5
-  startDelay: 0.48
---- !u!114 &5766320915674439222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850378690621662833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f026845b3a8b0134f9767951dc51530c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magneticRadius: 8
-  magneticStrength: 40
-  minDistance: 0.01
-  maxForce: 2
-  orbitStrength: 0.3
-  steerStrength: 0.75
-  maxSpeed: 12
-  groundCheck: {fileID: 6691868957996522726}
-  groundRadius: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  metalLayer:
-    serializedVersion: 2
-    m_Bits: 128
---- !u!114 &6387794829982321912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850378690621662833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1ddf07bc4f86814ab96416b3da9f1e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerVisualRotation
-  sprite: {fileID: 8549815607738809258}
-  magneticRadius: 8
-  metalLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  rotationSpeed: 10
 --- !u!50 &2786776289341013734
 Rigidbody2D:
   serializedVersion: 5
@@ -394,3 +321,117 @@ CapsuleCollider2D:
   m_Offset: {x: -0.027374856, y: -0.028985143}
   m_Size: {x: 0.5483085, y: 1.1030581}
   m_Direction: 0
+--- !u!114 &991957727311261235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a9b05fce6b4ab438306c8420757cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagneticMotor
+  magneticStrength: 50
+  minDistance: 1
+  maxForce: 4
+  orbitStrength: 0.3
+  steerStrength: 0.75
+--- !u!114 &2621721121671762329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1922ac90eb52034fa84aa64607b4d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagneticTargetDetector
+  magneticRadius: 8
+  metalLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &1272535439891621581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff5b6f90cbfcf1499de9ff5f9d56cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagneticTargetHighlighter
+  highlightColor: {r: 0, g: 1, b: 1, a: 1}
+  highlightScale: 1.15
+--- !u!114 &4596388607908435951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3847891a380a39488e461e143752c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!114 &5068731902590035270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedaf3d2b6042e744843a469834061b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
+--- !u!114 &1230132738484557143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86918b68536b19643b20f9acfc855b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerPhysicsLimiter
+  maxSpeed: 15
+--- !u!114 &4565160039229132262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea60e21555cbce43bcf4fa9e3ed049f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRotation
+  sprite: {fileID: 8549815607738809258}
+  rotationSpeed: 10
+--- !u!114 &5973755615810659827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e9f90224fbe3c34b90ace1100145623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStartImpulse
+  useStartImpulse: 1
+  startDirection: {x: 1, y: 0.2}
+  startImpulse: 1.5
+  startDelay: 0

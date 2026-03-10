@@ -226,12 +226,12 @@ GameObject:
   - component: {fileID: 5400600347214487968}
   - component: {fileID: 991957727311261235}
   - component: {fileID: 2621721121671762329}
-  - component: {fileID: 1272535439891621581}
   - component: {fileID: 4596388607908435951}
   - component: {fileID: 5068731902590035270}
   - component: {fileID: 1230132738484557143}
   - component: {fileID: 4565160039229132262}
   - component: {fileID: 5973755615810659827}
+  - component: {fileID: 221024365471733383}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -354,20 +354,6 @@ MonoBehaviour:
   metalLayer:
     serializedVersion: 2
     m_Bits: 128
---- !u!114 &1272535439891621581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850378690621662833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff5b6f90cbfcf1499de9ff5f9d56cc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MagneticTargetHighlighter
-  highlightColor: {r: 0, g: 1, b: 1, a: 1}
-  highlightScale: 1.15
 --- !u!114 &4596388607908435951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,3 +421,18 @@ MonoBehaviour:
   startDirection: {x: 1, y: 0.2}
   startImpulse: 1.5
   startDelay: 0
+--- !u!114 &221024365471733383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff5b6f90cbfcf1499de9ff5f9d56cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagneticTargetHighlighter
+  pullColor: {r: 0, g: 1, b: 1, a: 1}
+  pushColor: {r: 1, g: 0, b: 0, a: 1}
+  highlightScale: 1.15

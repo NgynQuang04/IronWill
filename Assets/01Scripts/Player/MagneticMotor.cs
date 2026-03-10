@@ -12,10 +12,7 @@ public class MagneticMotor : MonoBehaviour
     [Range(0f, 1f)]
     public float steerStrength = 0.75f;
 
-    public void ApplyMagnetForce(
-        Rigidbody2D rb,
-        MagneticTargetDetector detector,
-        PlayerInput input)
+    public void ApplyMagnetForce(Rigidbody2D rb, MagneticTargetDetector detector, PlayerInput input)
     {
         if (!detector.HasTarget) return;
 

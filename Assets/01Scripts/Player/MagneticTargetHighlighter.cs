@@ -1,16 +1,18 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MagneticTargetHighlighter : MonoBehaviour
 {
-    public Color highlightColor = Color.cyan;
+    public Color pullColor = Color.cyan;
+    public Color pushColor = Color.red;
     public float highlightScale = 1.15f;
 
     private Transform currentTarget;
     private Vector3 originalScale;
     private SpriteRenderer targetSprite;
+    private Color originalColor;
 
 
-    public void UpdateHighlight(MagneticTargetDetector detector)
+    public void UpdateHighlight(MagneticTargetDetector detector, PlayerInput playerInput)
     {
         if(!detector.HasTarget)
         {
@@ -20,36 +22,48 @@ public class MagneticTargetHighlighter : MonoBehaviour
 
         Transform target = detector.CurrentHit.collider.transform;
 
-        if(currentTarget == target)
+        // nếu target mới
+        if(currentTarget != target )
         {
-            return;
+            ClearHighlight();
+
+            currentTarget = target;
+            targetSprite = target.GetComponentInChildren<SpriteRenderer>();
+
+            if (targetSprite == null) return;
+
+            originalColor = targetSprite.color;
+            originalScale = targetSprite.transform.localScale;
+
+            targetSprite.transform.localScale = originalScale * highlightScale;
         }
 
-        ClearHighlight();
+        // cập nhật màu theo input
+        if (playerInput.Pull)
+        {
+            targetSprite.color = pullColor;
+        }
+        else if (playerInput.Push)
+        {
+            targetSprite.color = pushColor;
+        }
+        else
+        {
+            targetSprite.color = originalColor;
+        }
 
-        currentTarget = target;
-
-        targetSprite = target.GetComponentInChildren<SpriteRenderer>();
-
-        originalScale = target.localScale;
-
-        currentTarget.localScale = originalScale * highlightScale;
-        targetSprite.color = highlightColor;
     }
 
     void ClearHighlight()
     {
-        if(currentTarget == null)
-        {
+        if (currentTarget == null)
             return;
-        }
 
-        if(targetSprite != null)
+        if (targetSprite != null)
         {
-            targetSprite.color = Color.white;
+            targetSprite.color = originalColor;
+            targetSprite.transform.localScale = originalScale;
         }
-
-        currentTarget.localScale = originalScale;
 
         currentTarget = null;
         targetSprite = null;

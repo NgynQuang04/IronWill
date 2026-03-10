@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     PlayerPhysicsLimiter limiter;
     MagneticTargetHighlighter highlighter;
 
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
         rotation = GetComponent<PlayerRotation>();
         limiter = GetComponent<PlayerPhysicsLimiter>();
         highlighter = GetComponent<MagneticTargetHighlighter>();
+
     }
 
     void Update()
@@ -33,13 +35,14 @@ public class PlayerController : MonoBehaviour
             input.MouseDirection
         );
 
-        highlighter.UpdateHighlight(detector);
+        highlighter.UpdateHighlight(detector, input);
 
         rotation.UpdateRotation(
             rb,
             detector,
             input
         );
+
     }
 
     void FixedUpdate()

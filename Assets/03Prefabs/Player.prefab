@@ -224,14 +224,16 @@ GameObject:
   - component: {fileID: 6436331669856005441}
   - component: {fileID: 2786776289341013734}
   - component: {fileID: 5400600347214487968}
+  - component: {fileID: 3529830060758554243}
   - component: {fileID: 991957727311261235}
   - component: {fileID: 2621721121671762329}
-  - component: {fileID: 4596388607908435951}
-  - component: {fileID: 5068731902590035270}
   - component: {fileID: 1230132738484557143}
   - component: {fileID: 4565160039229132262}
   - component: {fileID: 5973755615810659827}
   - component: {fileID: 221024365471733383}
+  - component: {fileID: 4596388607908435951}
+  - component: {fileID: 5068731902590035270}
+  - component: {fileID: 2919784203094735447}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -321,6 +323,19 @@ CapsuleCollider2D:
   m_Offset: {x: -0.027374856, y: -0.028985143}
   m_Size: {x: 0.5483085, y: 1.1030581}
   m_Direction: 0
+--- !u!114 &3529830060758554243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec96c57fb106a16498f147df4f226e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnergyInventory
+  energy: 0
 --- !u!114 &991957727311261235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,30 +369,6 @@ MonoBehaviour:
   metalLayer:
     serializedVersion: 2
     m_Bits: 128
---- !u!114 &4596388607908435951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850378690621662833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3847891a380a39488e461e143752c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
---- !u!114 &5068731902590035270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850378690621662833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eedaf3d2b6042e744843a469834061b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
 --- !u!114 &1230132738484557143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,3 +427,39 @@ MonoBehaviour:
   pullColor: {r: 0, g: 1, b: 1, a: 1}
   pushColor: {r: 1, g: 0, b: 0, a: 1}
   highlightScale: 1.15
+--- !u!114 &4596388607908435951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3847891a380a39488e461e143752c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!114 &5068731902590035270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedaf3d2b6042e744843a469834061b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
+--- !u!114 &2919784203094735447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850378690621662833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a4b16dba302254bbd5791138d1a189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth

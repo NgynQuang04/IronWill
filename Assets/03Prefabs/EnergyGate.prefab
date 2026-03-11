@@ -100,7 +100,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5546849621739735928}
-  - component: {fileID: 617902193448301777}
   - component: {fileID: 8190541656259711917}
   - component: {fileID: 1247516978841184705}
   m_Layer: 0
@@ -126,20 +125,6 @@ Transform:
   - {fileID: 4673478499294823563}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &617902193448301777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3945724106253966723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79cda11e3fae9824494871ee114d1470, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  landingRadius: 1.5
-  maxLandingSpeed: 3
 --- !u!114 &8190541656259711917
 MonoBehaviour:
   m_ObjectHideFlags: 0

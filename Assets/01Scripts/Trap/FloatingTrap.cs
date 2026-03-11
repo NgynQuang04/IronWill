@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class FloatingTrap : MonoBehaviour
+public class FloatingTrap : Trap
 {
     public Transform pointA;
     public Transform pointB;

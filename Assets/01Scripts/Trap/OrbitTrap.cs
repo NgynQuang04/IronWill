@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class OrbitTrap : MonoBehaviour
+public class OrbitTrap : Trap
 {
     public Transform center;
     public float radius = 2f;

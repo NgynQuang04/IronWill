@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 140270356739497736}
   - component: {fileID: 4499347859143662554}
   - component: {fileID: 176816475284763452}
+  - component: {fileID: -9153846606731624133}
   m_Layer: 0
   m_Name: Hazard
   m_TagString: Untagged
@@ -167,7 +168,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -193,3 +194,15 @@ PolygonCollider2D:
       - {x: 0.5036503, y: -0.29058188}
       - {x: 0.49915075, y: -0.28773367}
   m_UseDelaunayMesh: 0
+--- !u!114 &-9153846606731624133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013473135569353220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c4aa01d1fadc646b06dc6008f65fc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Trap

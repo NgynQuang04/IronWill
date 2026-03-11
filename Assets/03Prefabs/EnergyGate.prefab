@@ -101,8 +101,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5546849621739735928}
   - component: {fileID: 617902193448301777}
+  - component: {fileID: 8190541656259711917}
+  - component: {fileID: 1247516978841184705}
   m_Layer: 0
-  m_Name: Door
+  m_Name: EnergyGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,3 +140,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landingRadius: 1.5
   maxLandingSpeed: 3
+--- !u!114 &8190541656259711917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945724106253966723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebe4a2335a149e48ac3cea29139a844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnergyGate
+  requiredEnergy: 3
+  gateVisual: {fileID: 2963525909939539478}
+  gateCollider: {fileID: 1247516978841184705}
+--- !u!58 &1247516978841184705
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945724106253966723}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.014510393, y: 0}
+  m_Radius: 0.8482499

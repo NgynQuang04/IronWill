@@ -30,18 +30,12 @@ public class PlayerController : MonoBehaviour
     {
         input.UpdateInput();
 
-        detector.UpdateTarget(
-            rb.position,
-            input.MouseDirection
+        detector.UpdateTarget(rb.position, input.MouseDirection
         );
 
         highlighter.UpdateHighlight(detector, input);
 
-        rotation.UpdateRotation(
-            rb,
-            detector,
-            input
-        );
+        rotation.UpdateRotation( rb, detector, input);
 
     }
 

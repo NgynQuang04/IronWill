@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    bool isDead;
+    private bool isDead;
 
     public void Kill()
     {
-        if (isDead) return;
+        if (isDead)
+            return;
 
         isDead = true;
+
+        Debug.Log("Player died");
 
         GameEvents.OnPlayerDeath?.Invoke();
 

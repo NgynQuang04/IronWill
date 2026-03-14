@@ -2,30 +2,45 @@ using UnityEngine;
 
 public class EnergyInventory : MonoBehaviour
 {
-    [SerializeField] private int energy;
+    [SerializeField] private int maxEnergy = 3;
 
-    public int Energy => energy;
+    private int currentEnergy;
+
+    public int CurrentEnergy => currentEnergy;
+    public int MaxEnergy => maxEnergy;
+
+    private void Start()
+    {
+        NotifyEnergyChanged();
+    }
 
     public void AddEnergy(int amount)
     {
-        energy += amount;
-        Debug.Log("Energy added. Current energy: " + energy);
+        currentEnergy += amount;
 
-        EnergyEvents.OnEnergyChanged?.Invoke(energy);
+        if (currentEnergy > maxEnergy)
+            currentEnergy = maxEnergy;
+
+        NotifyEnergyChanged();
     }
 
     public bool HasEnough(int required)
     {
-        return energy >= required;
+        return currentEnergy >= required;
     }
 
     public void SpendEnergy(int amount)
     {
-        energy -= amount;
+        currentEnergy -= amount;
 
-        if (energy < 0)
-            energy = 0;
+        if (currentEnergy < 0)
+            currentEnergy = 0;
 
-        EnergyEvents.OnEnergyChanged?.Invoke(energy);
+        NotifyEnergyChanged();
+    }
+
+    private void NotifyEnergyChanged()
+    {
+        GameEvents.OnEnergyChanged?.Invoke(currentEnergy, maxEnergy);
     }
 }

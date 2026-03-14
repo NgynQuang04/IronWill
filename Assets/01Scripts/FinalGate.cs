@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FinalGate : MonoBehaviour
 {
@@ -8,5 +8,6 @@ public class FinalGate : MonoBehaviour
             return;
 
         GameEvents.OnGameWin?.Invoke();
+        Debug.Log(" player đã qua cổng");
     }
 }

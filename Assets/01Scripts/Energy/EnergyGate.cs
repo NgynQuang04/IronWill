@@ -9,17 +9,17 @@ public class EnergyGate : MonoBehaviour
 
     private bool opened;
 
-    private void Start()
+    private void OnEnable()
     {
-        EnergyEvents.OnEnergyChanged += CheckGate;
+        GameEvents.OnEnergyChanged += CheckGate;
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
-        EnergyEvents.OnEnergyChanged -= CheckGate;
+        GameEvents.OnEnergyChanged -= CheckGate;
     }
 
-    private void CheckGate(int currentEnergy)
+    private void CheckGate(int currentEnergy, int maxEnergy)
     {
         if (opened)
             return;
@@ -37,7 +37,11 @@ public class EnergyGate : MonoBehaviour
         if (gateVisual != null)
             gateVisual.SetActive(false);
 
-        if (gateCollider != null)
-            gateCollider.enabled = false;
+        /*if (gateCollider != null)
+            gateCollider.enabled = false;*/
+
+        Debug.Log("Gate opened");
+
+        GameEvents.OnPortalActivated?.Invoke();
     }
 }

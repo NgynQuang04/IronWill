@@ -10,6 +10,8 @@ public class Trap : MonoBehaviour
         PlayerHealth player = other.GetComponent<PlayerHealth>();
 
         if (player != null)
+        {
             player.Kill();
+        }
     }
 }

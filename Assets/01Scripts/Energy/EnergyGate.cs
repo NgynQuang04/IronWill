@@ -1,13 +1,26 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnergyGate : MonoBehaviour
 {
     [SerializeField] private int requiredEnergy = 3;
 
-    [SerializeField] private GameObject gateVisual;
+    [Header("Gate Visuals")]
+    [SerializeField] private GameObject gateClosedVisual;
+    [SerializeField] private GameObject gateOpenVisual;
+
     [SerializeField] private Collider2D gateCollider;
 
     private bool opened;
+
+    private void Start()
+    {
+        // trạng thái ban đầu
+        if (gateClosedVisual != null)
+            gateClosedVisual.SetActive(true);
+
+        if (gateOpenVisual != null)
+            gateOpenVisual.SetActive(false);
+    }
 
     private void OnEnable()
     {
@@ -34,11 +47,16 @@ public class EnergyGate : MonoBehaviour
     {
         opened = true;
 
-        if (gateVisual != null)
-            gateVisual.SetActive(false);
+        // đổi visual
+        if (gateClosedVisual != null)
+            gateClosedVisual.SetActive(false);
 
-        /*if (gateCollider != null)
-            gateCollider.enabled = false;*/
+        if (gateOpenVisual != null)
+            gateOpenVisual.SetActive(true);
+
+        // nếu muốn bỏ collider
+        if (gateCollider != null)
+            gateCollider.enabled = false;
 
         Debug.Log("Gate opened");
 

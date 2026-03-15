@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8590672949767309995}
   - component: {fileID: 9046896755605008610}
   - component: {fileID: 6667449506200427880}
+  - component: {fileID: 4508644333026789375}
   m_Layer: 0
   m_Name: EnergyCore
   m_TagString: Untagged
@@ -98,6 +99,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnergyPickup
   energyAmount: 1
+--- !u!114 &4508644333026789375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786091567122963073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07520647f26c29a48baefd37aa92664a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnergyCoreAnimation
+  hoverHeight: 0.2
+  hoverSpeed: 2
+  rotateSpeed: 90
+  pulseSpeed: 2
+  pulseAmount: 0.1
 --- !u!1 &5317741904834042715
 GameObject:
   m_ObjectHideFlags: 0

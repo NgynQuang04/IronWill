@@ -8,7 +8,7 @@ public class Drifter : MonoBehaviour
     public float maxSpeed = 12f;
 
     [Header("Direction")]
-    public bool moveRight = true;   // tick = sang phải, bỏ tick = sang trái
+    public Vector2 moveDirection = Vector2.right;
 
     private Rigidbody2D rb;
 
@@ -19,7 +19,7 @@ public class Drifter : MonoBehaviour
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
-        Vector2 dir = moveRight ? Vector2.right : Vector2.left;
+        Vector2 dir = moveDirection.normalized;
 
         rb.AddForce(dir * initialImpulse, ForceMode2D.Impulse);
     }

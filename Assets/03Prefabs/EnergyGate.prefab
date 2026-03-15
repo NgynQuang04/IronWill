@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1036826605320606034}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00000047684, y: -1.421e-12, z: 0.0000000037253}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.07808034, y: 0.07808034, z: 0.07808034}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5546849621739735928}
   - component: {fileID: 8190541656259711917}
-  - component: {fileID: 1247516978841184705}
+  - component: {fileID: 2502411628522177262}
   m_Layer: 0
   m_Name: EnergyGate
   m_TagString: Untagged
@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 3945724106253966723}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9, y: -2.23, z: -0.048382547}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -139,10 +139,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnergyGate
   requiredEnergy: 3
-  gateVisual: {fileID: 0}
-  gateCollider: {fileID: 1247516978841184705}
---- !u!58 &1247516978841184705
-CircleCollider2D:
+  gateClosedVisual: {fileID: 1036826605320606034}
+  gateOpenVisual: {fileID: 6113451285538572855}
+  gateCollider: {fileID: 2502411628522177262}
+--- !u!70 &2502411628522177262
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -175,8 +176,9 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.014510393, y: 0}
-  m_Radius: 0.8482499
+  m_Offset: {x: 0.0015227199, y: 0.0154390335}
+  m_Size: {x: 1.0156187, y: 1.9727149}
+  m_Direction: 0
 --- !u!1 &6113451285538572855
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 6113451285538572855}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00000047684, y: -1.421e-12, z: 0.0000000037253}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.07808034, y: 0.07808034, z: 0.07808034}
   m_ConstrainProportionsScale: 0
   m_Children: []

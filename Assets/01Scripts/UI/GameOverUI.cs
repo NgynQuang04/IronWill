@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
@@ -18,6 +18,12 @@ public class GameOverUI : MonoBehaviour
     {
         GameEvents.OnPlayerDeath -= ShowGameOver;
     }
+
+   /* void Start()
+    {
+        gameOverPanel.SetActive(false); // reset UI
+        Time.timeScale = 1f;            // đảm bảo game chạy bình thường
+    }*/
 
     void ShowGameOver()
     {

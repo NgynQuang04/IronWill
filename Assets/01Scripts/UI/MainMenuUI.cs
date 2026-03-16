@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuUI : MonoBehaviour
 {
     [Header("Scene Names")]
-    [SerializeField] private string firstLevelScene = "Scene4";
+    [SerializeField] private string firstLevelScene = "HD";
 
     public void PlayGame()
     {

@@ -3784,6 +3784,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraZone_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2855852676163151714, guid: a4346fa1fab45fb4e914010b8c8310fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.029
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855852676163151714, guid: a4346fa1fab45fb4e914010b8c8310fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.562
+      objectReference: {fileID: 0}
     - target: {fileID: 4531819591759982700, guid: a4346fa1fab45fb4e914010b8c8310fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.51

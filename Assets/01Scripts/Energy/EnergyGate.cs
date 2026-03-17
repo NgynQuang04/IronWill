@@ -14,12 +14,16 @@ public class EnergyGate : MonoBehaviour
 
     private void Start()
     {
-        // trạng thái ban đầu
         if (gateClosedVisual != null)
             gateClosedVisual.SetActive(true);
 
         if (gateOpenVisual != null)
             gateOpenVisual.SetActive(false);
+
+        if (gateCollider != null)
+            gateCollider.enabled = false;
+
+        Debug.Log("bắt đầu game");
     }
 
     private void OnEnable()
@@ -47,19 +51,36 @@ public class EnergyGate : MonoBehaviour
     {
         opened = true;
 
-        // đổi visual
         if (gateClosedVisual != null)
             gateClosedVisual.SetActive(false);
 
         if (gateOpenVisual != null)
             gateOpenVisual.SetActive(true);
 
-        // nếu muốn bỏ collider
         if (gateCollider != null)
-            gateCollider.enabled = false;
+            gateCollider.enabled = true;
 
         Debug.Log("Gate opened");
 
         GameEvents.OnPortalActivated?.Invoke();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!opened)
+            return;
+
+        if (other.CompareTag("Player"))
+        {
+            WinGame();
+            Debug.Log("Chạm vào player");
+        }
+    }
+
+    private void WinGame()
+    {
+        Debug.Log("WIN GAME");
+
+        GameEvents.OnGameWin?.Invoke();
     }
 }

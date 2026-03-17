@@ -276,6 +276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagneticFieldZone
   attract: 0
-  forceStrength: 1
-  maxSpeed: 1
+  forceStrength: 20
+  maxSpeed: 15
   minDistance: 0.3

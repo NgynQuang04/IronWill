@@ -363,7 +363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 828, y: 419}
+  m_AnchoredPosition: {x: 870, y: 443}
   m_SizeDelta: {x: 107.6743, y: 66.8202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7003125545583033554
@@ -460,9 +460,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6715412249453730053, guid: 9835f164f1fd60041b1d79807810a973, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayButtonClick
+      - m_Target: {fileID: 1162604633821233417}
+        m_TargetAssemblyTypeName: UIButtonAudio, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -697,9 +697,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6715412249453730053, guid: 9835f164f1fd60041b1d79807810a973, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayButtonClick
+      - m_Target: {fileID: 1162604633821233417}
+        m_TargetAssemblyTypeName: UIButtonAudio, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1882,9 +1882,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6715412249453730053, guid: 9835f164f1fd60041b1d79807810a973, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayButtonClick
+      - m_Target: {fileID: 1162604633821233417}
+        m_TargetAssemblyTypeName: UIButtonAudio, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2177,9 +2177,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6715412249453730053, guid: 9835f164f1fd60041b1d79807810a973, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayButtonClick
+      - m_Target: {fileID: 1162604633821233417}
+        m_TargetAssemblyTypeName: UIButtonAudio, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2804,9 +2804,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6715412249453730053, guid: 9835f164f1fd60041b1d79807810a973, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayButtonClick
+      - m_Target: {fileID: 1162604633821233417}
+        m_TargetAssemblyTypeName: UIButtonAudio, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3249,9 +3249,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6715412249453730053, guid: 9835f164f1fd60041b1d79807810a973, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayButtonClick
+      - m_Target: {fileID: 1162604633821233417}
+        m_TargetAssemblyTypeName: UIButtonAudio, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3544,9 +3544,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6715412249453730053, guid: 9835f164f1fd60041b1d79807810a973, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayButtonClick
+      - m_Target: {fileID: 1162604633821233417}
+        m_TargetAssemblyTypeName: UIButtonAudio, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3814,7 +3814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: 0}
+  m_AnchoredPosition: {x: 15, y: 0}
   m_SizeDelta: {x: 25, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3593229369987357271
@@ -3838,7 +3838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.6293886, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4114,9 +4114,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6715412249453730053, guid: 9835f164f1fd60041b1d79807810a973, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayButtonClick
+      - m_Target: {fileID: 8553257835917416584}
+        m_TargetAssemblyTypeName: PauseMenuUI, Assembly-CSharp
+        m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4126,9 +4126,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6715412249453730053, guid: 9835f164f1fd60041b1d79807810a973, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayButtonClick
+      - m_Target: {fileID: 1162604633821233417}
+        m_TargetAssemblyTypeName: UIButtonAudio, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4697,6 +4697,7 @@ GameObject:
   - component: {fileID: 6705450242401170865}
   - component: {fileID: 8553257835917416584}
   - component: {fileID: 8021885144542792495}
+  - component: {fileID: 1162604633821233417}
   - component: {fileID: 7574600545127357923}
   - component: {fileID: 2583951476754907338}
   m_Layer: 5
@@ -4802,6 +4803,18 @@ MonoBehaviour:
   winPanel: {fileID: 1898182663246070318}
   nextButton: {fileID: 444617948382152888}
   comingSoonText: {fileID: 6350786851921695708}
+--- !u!114 &1162604633821233417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7382295712751255750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc3439417d0819449adbb4ac2db60bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonAudio
 --- !u!114 &7574600545127357923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5013,7 +5026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -19, y: 0}
   m_SizeDelta: {x: 25, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5193258563015750498
@@ -5037,7 +5050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.6293886, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5188,9 +5201,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6715412249453730053, guid: 9835f164f1fd60041b1d79807810a973, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayButtonClick
+      - m_Target: {fileID: 1162604633821233417}
+        m_TargetAssemblyTypeName: UIButtonAudio, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

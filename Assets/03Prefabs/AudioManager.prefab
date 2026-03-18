@@ -48,9 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   mainMenuMusic: {fileID: 8300000, guid: 758eee5993c386f4284ee888039d7bd6, type: 3}
-  gameMusic: {fileID: 8300000, guid: cb9470439f23db043a8362cb1b54088d, type: 3}
   winMusic: {fileID: 8300000, guid: 3b459bcc4a36bd246a8ae6923f8807be, type: 3}
   loseMusic: {fileID: 8300000, guid: 25804313d98f1f947a937381b1be14bb, type: 3}
+  lv1Music: {fileID: 8300000, guid: f0802fe31ab136c4aabf99e32178714e, type: 3}
+  lv2Music: {fileID: 8300000, guid: fc70d4bd31c50e946874cef0a87e7016, type: 3}
   buttonClick: {fileID: 8300000, guid: 018f70ddb1c4bbd4a9f30451d1f3d374, type: 3}
   energyCollect: {fileID: 8300000, guid: d7e05547395a253438ebe350a03c749d, type: 3}
   musicSource: {fileID: 5222784226836598643}

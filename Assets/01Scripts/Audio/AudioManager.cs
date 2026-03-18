@@ -7,9 +7,10 @@ public class AudioManager : MonoBehaviour
 
     [Header("Background Music")]
     public AudioClip mainMenuMusic;
-    public AudioClip gameMusic;
     public AudioClip winMusic;
     public AudioClip loseMusic;
+    public AudioClip lv1Music;
+    public AudioClip lv2Music;
 
     [Header("UI Sounds")]
     public AudioClip buttonClick;
@@ -44,9 +45,9 @@ public class AudioManager : MonoBehaviour
         if (scene.name == "MainMenu")
             PlayMusic(mainMenuMusic);
         else if (scene.name.StartsWith("LV1"))
-            PlayMusic(gameMusic);
+            PlayMusic(lv1Music);
         else if (scene.name.StartsWith("LV2"))
-            PlayMusic(gameMusic);
+            PlayMusic(lv2Music);
     }
 
     // 🔹 Music control cơ bản
@@ -62,16 +63,12 @@ public class AudioManager : MonoBehaviour
         musicSource.Stop();
     }
 
-    // Reset nhạc gameplay khi restart
-    public void ResetMusicToGameplay()
-    {
-        PlayMusic(gameMusic);
-    }
+    
 
     // 🔹 SFX cơ bản
     public void PlaySFX(AudioClip clip)
     {
-        if (clip == null) return;
+        if (clip == null || sfxSource == null || !sfxSource.gameObject.activeInHierarchy) return;
         sfxSource.PlayOneShot(clip);
     }
 

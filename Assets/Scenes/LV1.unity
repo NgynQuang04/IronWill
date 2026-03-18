@@ -1797,7 +1797,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3610722758230963455, guid: a2791837d2aa5714dbe792e1eee01ba2, type: 3}
+  m_Sprite: {fileID: -1377756196601159634, guid: 4939c4e2f9586d7499147951a03c5f04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1873,6 +1873,14 @@ PrefabInstance:
       propertyPath: useStartImpulse
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5871875962937078574, guid: ef38d05b78bdb084ab7539dc71201dcf, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 2019457948}
+    - target: {fileID: 5871875962937078574, guid: ef38d05b78bdb084ab7539dc71201dcf, type: 3}
+      propertyPath: useMobileInput
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6983669072983337379, guid: ef38d05b78bdb084ab7539dc71201dcf, type: 3}
       propertyPath: pushColor.a
       value: 0.7294118
@@ -1888,6 +1896,22 @@ PrefabInstance:
     - target: {fileID: 6983669072983337379, guid: ef38d05b78bdb084ab7539dc71201dcf, type: 3}
       propertyPath: pushColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581917855529351815, guid: ef38d05b78bdb084ab7539dc71201dcf, type: 3}
+      propertyPath: targetScale
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581917855529351815, guid: ef38d05b78bdb084ab7539dc71201dcf, type: 3}
+      propertyPath: slowMotionScale
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581917855529351815, guid: ef38d05b78bdb084ab7539dc71201dcf, type: 3}
+      propertyPath: animationDuration
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581917855529351815, guid: ef38d05b78bdb084ab7539dc71201dcf, type: 3}
+      propertyPath: slowMotionDuration
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3143,7 +3167,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3610722758230963455, guid: a2791837d2aa5714dbe792e1eee01ba2, type: 3}
+  m_Sprite: {fileID: -1377756196601159634, guid: 4939c4e2f9586d7499147951a03c5f04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4554,7 +4578,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3610722758230963455, guid: a2791837d2aa5714dbe792e1eee01ba2, type: 3}
+  m_Sprite: {fileID: -1377756196601159634, guid: 4939c4e2f9586d7499147951a03c5f04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5406,6 +5430,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c5cac7ee080ad74281a0b8d4e3d448a, type: 3}
+--- !u!114 &2019457948 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7216483693805909634, guid: 9503bb1e46d650a45889647b468bff78, type: 3}
+  m_PrefabInstance: {fileID: 176428386}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2036931157
 PrefabInstance:
   m_ObjectHideFlags: 0

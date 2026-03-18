@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     PlayerRotation rotation;
     PlayerPhysicsLimiter limiter;
     MagneticTargetHighlighter highlighter;
+    PlayerHealth health;
 
 
     void Awake()
@@ -23,20 +24,22 @@ public class PlayerController : MonoBehaviour
         rotation = GetComponent<PlayerRotation>();
         limiter = GetComponent<PlayerPhysicsLimiter>();
         highlighter = GetComponent<MagneticTargetHighlighter>();
+        health = GetComponent<PlayerHealth>();
 
     }
 
     void Update()
     {
+        if (health != null && health.IsDead())
+            return;
+
         input.UpdateInput();
 
-        detector.UpdateTarget(rb.position, input.MouseDirection
-        );
+        detector.UpdateTarget(rb.position, input.MouseDirection);
 
         highlighter.UpdateHighlight(detector, input);
 
-        rotation.UpdateRotation( rb, detector, input);
-
+        rotation.UpdateRotation(rb, detector, input);
     }
 
     void FixedUpdate()

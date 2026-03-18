@@ -19,7 +19,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("LV1");
     }
 
     public void OpenLevelSelect()

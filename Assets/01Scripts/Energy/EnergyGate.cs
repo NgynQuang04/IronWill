@@ -72,15 +72,13 @@ public class EnergyGate : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            WinGame();
-            Debug.Log("Chạm vào player");
+            PlayerHealth player = other.GetComponent<PlayerHealth>();
+
+            if (player != null)
+            {
+                player.Win(); // 👈 gọi animation win
+            }
         }
     }
 
-    private void WinGame()
-    {
-        Debug.Log("WIN GAME");
-
-        GameEvents.OnGameWin?.Invoke();
-    }
 }

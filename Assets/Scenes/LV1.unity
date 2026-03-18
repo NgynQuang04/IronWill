@@ -1879,7 +1879,7 @@ PrefabInstance:
       objectReference: {fileID: 2019457948}
     - target: {fileID: 5871875962937078574, guid: ef38d05b78bdb084ab7539dc71201dcf, type: 3}
       propertyPath: useMobileInput
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6983669072983337379, guid: ef38d05b78bdb084ab7539dc71201dcf, type: 3}
       propertyPath: pushColor.a

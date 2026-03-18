@@ -66,7 +66,7 @@ public class PlayerHealth : MonoBehaviour
 
         // 👉 animation win: PHÓNG TO + xoay + fade nhẹ
         yield return AnimateScaleRotateFade(
-            transform.localScale * 2f, // phóng to
+            transform.localScale * 0f, // phóng to
             720f,                      // xoay nhiều hơn
             winDuration
         );

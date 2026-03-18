@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnergyInventory
   maxEnergy: 3
+  currentEnergy: 0
 --- !u!114 &9139537344639460180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerPhysicsLimiter
   maxSpeed: 15
+  deceleration: 0.2
 --- !u!114 &8905887442929857591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eedaf3d2b6042e744843a469834061b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
+  useMobileInput: 0
+  joystick: {fileID: 0}
 --- !u!114 &8581917855529351815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a4b16dba302254bbd5791138d1a189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  deathDuration: 0.8
+  winDuration: 1.2
+  slowMotionScale: 0.3
 --- !u!1 &2884521491544699877
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +497,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1991570256494074455, guid: 6838a34fbeaa49e41a1f90ef220f16b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

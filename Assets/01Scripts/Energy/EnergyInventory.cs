@@ -4,7 +4,7 @@ public class EnergyInventory : MonoBehaviour
 {
     [SerializeField] private int maxEnergy = 3;
 
-    private int currentEnergy;
+    [SerializeField]  private int currentEnergy;
 
     public int CurrentEnergy => currentEnergy;
     public int MaxEnergy => maxEnergy;

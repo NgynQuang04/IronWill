@@ -2173,7 +2173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1139880465487588385
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4074,7 +4074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5659004752748635097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4624,13 +4624,13 @@ RectTransform:
   m_Children:
   - {fileID: 8952939059316083966}
   - {fileID: 5813437312313160800}
-  - {fileID: 1139880465487588385}
-  - {fileID: 5659004752748635097}
-  - {fileID: 7216483693805909639}
-  - {fileID: 6041053569584679873}
   - {fileID: 5982099258258283775}
   - {fileID: 5554613868810548824}
   - {fileID: 5213290704435161}
+  - {fileID: 6041053569584679873}
+  - {fileID: 1139880465487588385}
+  - {fileID: 5659004752748635097}
+  - {fileID: 7216483693805909639}
   - {fileID: 206028120554488163}
   m_Father: {fileID: 3521603276088184871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5411,6 +5411,10 @@ PrefabInstance:
     - target: {fileID: 8170153791668043269, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_Name
       value: Floating Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170153791668043269, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
